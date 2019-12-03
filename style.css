@@ -1,0 +1,378 @@
+*{
+	/* 匹配所有元素,去掉内边距和外边距 */
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: auto;
+	background-color:white;
+}
+body{
+	height:auto;
+	width: 375px;
+	background-color: #f6f6f6;
+	margin: 0 auto;
+}
+.header{
+	width: 375px;
+	height: 37px;
+	background: #FF852A;
+	color: #fff;
+	/* 弹性布局,侧轴居中,主轴平均分布,两边是中间的一半 */
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	/* 固定定位 */
+	position: fixed;
+	top: 0;
+}
+.logo{
+	width: 37px;
+	height: 37px;
+	background-image:url(img/tao.png) ;
+	background-size: 80%;
+	background-position: center;
+	/* 图片设置不平铺 */
+	background-repeat: no-repeat;
+}
+.searchBtn{
+	width: 324px;
+	height: 25px;
+	background: #FF4E22;
+	/* 设定圆角  */
+	border-radius: 4px;
+	margin-right: 8px;
+	font-size: 12px;
+	/* 弹性布局,主轴居中,侧轴居中 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.searchIcon{
+	width: 25px;
+	height: 20px;
+	background-image: url(img/search.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.swiper{
+	/* 上边距 */ 
+	margin-top: 37px;
+	width: 375px;
+	height: 120px;
+	background-repeat: no-repeat;
+	background-image: url(img/huxingbaibian.png),url(img/swiper.jpg);
+	background-size: 100%, 100%;
+	/* 图片的位置 0%(水平) 113px(竖直) */
+	background-position: 0% 108px, 0 0;
+	background-color: #FFFFFF;
+}
+/* 图标列表 */
+.iconlist{
+	width: 375px;
+	height: 130px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	background-color: #FFFFFF;
+}
+.iconItem{
+	width: 100%;
+	height: 67px;
+	/* 弹性布局,上下结构 */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.icon{
+	width: 61px;
+	height: 48px;
+	background-image: url(img/tu1.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.iconText{
+	font-size: 11px;
+	line-height: 15px;
+	margin-top: 4px;
+	margin-bottom: 8px;
+	color: rgb(102,102,102);
+}
+/* 头条 */
+.toutiao{
+	width: 375px;
+	height: 60px;
+	display: flex;
+	background-color: #FFFFFF;
+}
+.left{
+	width: 60px;
+	height: 60px;
+	background-image: url(img/toutiao.webp);
+	background-size: auto 65%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.center{
+	width: 232px;
+	height: 60px;
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.right{
+	width: 85px;
+	height: 60px;
+	background-image: url(img/zhezhao.png),url(img/flower.jpg);
+	background-size: 100%,100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.tag{
+	color: red;
+	border: 1px solid rgb(230,10,31);
+	border-radius: 3px;
+}
+.news{
+	display: flex;
+	margin: 5px 0px;
+}
+.text{
+	width: 200px;
+	height: 19px;
+	color: rgb(51,51,51);
+	padding: 0 5px;
+	/* 文字溢出出现省略号,进行文字隐藏(以下三个属性需同时设置) */
+	overflow: hidden;/* 溢出隐藏 */
+	text-overflow: ellipsis;/* 文字溢出出现省略号 */
+	white-space: nowrap;/* 不予许换行 */
+	box-sizing: border-box;
+}
+/* 淘抢购 */
+.kuang{
+	width: 375px;
+	height: 244px;
+	/* background-color最后值(.03)为设置颜色透明度 */
+	background-color: #f4f4f4;
+	padding-top: 10px;
+	border-radius: 8px;
+}
+.tqg{
+	background-color: #FFFFFF;
+	width: 345px;
+	height: 224px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 5px;
+	margin-left: 15px;
+	border-radius: 15px;
+}
+.tqgItem{
+	width: 50%;
+	height: 112px;
+	display: flex;
+}
+.tqgleft{
+	width: 94px;
+	height: 112px;
+	display: flex;
+	flex-direction: column;
+}
+.tqgleft .title{
+	height: 100%;
+	width: 90px;
+	background-image: url(img/tqg.png);
+	background-size: auto 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.tqgleft .brief{
+	height: 19px;
+	font-size: 11px;
+	color: skyblue;
+	padding-left: 6px;
+	margin-left: 5px;
+}
+.tqgleft .brief.b1{
+	color: pink;
+}
+.product{
+	width: 100%;
+	flex: 1;
+}
+.product img{
+	width: 80%;
+	height: auto;
+}
+.tqgright{
+	flex: 1;
+	height: 112px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right:2px solid #f4f4f4;
+	border-radius: 3px;
+}
+.tqgright.r1{
+	border: 0;
+}
+
+/* 尾部导航 */
+.tail{
+	width: 375px;
+	height: 45px;
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	background-color: #ffffff;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #f8f8f8;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	padding-top: 2px;
+}
+.tailItem{
+	width: 48px;
+	height: 40px;
+	/* 弹性布局,上下结构 */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.tai{
+	width: 20px;
+	height: 20px;
+	background-image: url(img/shouye.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.tailText{
+	font-size: 10px;
+	padding-top: 5px;
+}
+
+/* 猜你喜欢 */
+.live{
+	width: 375px;
+	height: 49px;
+}
+.live img{
+	width: 165px;
+	height: 20px;
+	padding: 5px 105px;
+}
+.commodity{
+	width: 375px;
+	height: 1320px;
+	display: flex;
+	flex-wrap: wrap;/* 换行 */
+	justify-content: space-evenly;
+	align-items: center;
+}
+.commodityLeft{
+	width: 165px;
+	height: 266px;
+}
+.commodityImg{
+	width: 165px;
+	height: 170px;
+	background-image:url(img/001.webp) ;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:10px 10px 0px 0px;
+}
+.commodityItem{
+	width: 165px;
+	height: 96px;
+}
+.commodityNews{
+	width: 153px;
+	height: 32px;
+	color: black;
+	font-style: "微软雅黑";
+	font-size: 13px;
+	text-align: center;
+	margin-left:8px ;
+	margin-top: 10px;
+	overflow: hidden;/* 溢出隐藏 */
+	box-sizing: border-box;
+}
+.commodityPrice{
+	width: 130px;
+	height: 54px;
+	color: #ff5500;
+	font-style: "微软雅黑";
+	bottom: 0;
+	top: 0;
+	display: flex;
+	justify-content: flex-start;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	padding-right: 5px;
+}
+.commoditySymbol{
+	font-size: 13px;
+	padding-top: 4px;
+}
+.commodityMoney{
+	font-size: 16px;
+}
+.commoditySales{
+	font-size: 12px;
+	color: black;
+	padding-top: 4px;
+}
+.commodityright{
+	width: 165px;
+	height: 266px;	
+}
+
+/* 底部信息 */
+.bottom{
+	width: 375px;
+	height: 141px;
+	background-color: rgb(78, 82, 94);
+}
+.bottomM{
+	width: 375px;
+	height: 15px;
+	background-color: rgb(78, 82, 94);
+}
+.bottomItem{
+	width: 375px;
+	height: 35px;
+	background-color: rgb(78, 82, 94);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-sizing: border-box;
+}
+.bottomLogon{
+	width: 70px;
+	height: 23px;
+	border: 1px solid black;
+	color: rgb(195, 198, 202);
+	font-style: "微软雅黑";
+	border-radius: 5px;
+	text-align: center;
+	font-size: 15px;
+}
+.bottomNews{
+	width: 375px;
+	height: auto;
+	font-size: 12px;
+	color: rgb(195, 198, 202);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 125px;
+}
